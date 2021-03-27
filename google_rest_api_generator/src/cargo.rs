@@ -16,8 +16,8 @@ rustls-tls = ["reqwest/rustls-tls"]
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }
 futures = "0.3"
-google_api_auth = { git = "https://github.com/google-apis-rs/generator", branch = "refactor/async" }
-google_field_selector = { git = "https://github.com/google-apis-rs/generator", branch = "refactor/async" }
+google_api_auth = { git = "https://github.com/bes/generator", branch = "refactor/async" }
+google_field_selector = { git = "https://github.com/bes/generator", branch = "refactor/async" }
 mime = "0.3"
 percent-encoding = "2"
 reqwest = { version = "0.11.2", default-features = false, features = ["json"] }
@@ -44,7 +44,7 @@ pub(crate) fn cargo_toml(crate_name: &str, include_bytes_dep: bool, api: &shared
 
     if include_bytes_dep {
         doc.push_str("\n\n[dependencies.google_api_bytes]\n");
-        doc.push_str("git = \"https://github.com/google-apis-rs/generator\"\n");
+        doc.push_str("git = \"https://github.com/bes/generator\"\n");
     }
 
     doc
